@@ -5,12 +5,12 @@
 </head>
 <body>
  
-	<h2>CPengaduan Masyarakat</h2>
+	<h2>Pengaduan Masyarakat</h2>
 	<br/>
 	<a href="index.php">KEMBALI</a>
 	<br/>
 	<br/>
-	<h3>EDIT DATA MAHASISWA</h3>
+	<h3>EDIT DATA PENGADUAN</h3>
  
 	<?php
 	include 'koneksi.php';
