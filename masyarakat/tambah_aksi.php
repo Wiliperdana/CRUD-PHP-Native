@@ -12,7 +12,7 @@ $status = $_POST['status'];
 // menginput data ke database
 mysqli_query($koneksi,"INSERT INTO masyarakat VALUES('','$nama','$nik', '$tgl_pengaduan', '$isi_pengaduan', '$status')");
  
-// mengalihkan halaman kembali ke halaman admin
-header("location:halaman_admin.php");
+// mengalihkan halaman kembali ke halaman masyarakat
+header("location:halaman_masyarakat.php");
  
 ?>

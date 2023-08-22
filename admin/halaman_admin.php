@@ -5,23 +5,25 @@
 </head>
 <body>
 	<?php
-	include '../config.php';
+	include '../koneksi.php';
 
-	// mengaktifkan session
 	session_start();
-	
-	// cek apakah user telah login, jika belum login maka di alihkan ke halaman login
-	if($_SESSION['status'] !="login"){
-		header("location:../index.php");
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:index.php?pesan=gagal");
 	}
-	
-	// menampilkan pesan selamat datang
-	echo "Hai, selamat datang ". $_SESSION['username'];
+ 
 	?>
+	<h1>Halaman Admin</h1>
+ 
+	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+	<a href="../logout.php">LOGOUT</a>
  
 	<h2>Pengaduan Masyarakat</h2>
 	<br/>
 	<a href="tambah.php">+ TAMBAH PENGADUAN</a>
+	<a href="register.php">+ REGISTRASI</a>
 	<br/>
 	<br/>
 	<table border="1">
@@ -34,7 +36,6 @@
             <th>Status</th>
 		</tr>
 		<?php 
-		include 'koneksi.php';
 		$no = 1;
 		$data = mysqli_query($koneksi,"SELECT * FROM masyarakat");
 		while($d = mysqli_fetch_array($data)){
@@ -55,9 +56,6 @@
 			<?php 
 		}
 		?>
-		<tr>
-		<a href="logout.php">LOGOUT</a>
-		</tr>		
 	</table>
 </body>
 </html>

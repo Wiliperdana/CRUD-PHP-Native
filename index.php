@@ -11,7 +11,7 @@
 	<br/>
 	<div class="login">
 	<br/>
-		<form action="login.php" method="post" onSubmit="return validasi()">
+		<form action="cek_login.php" method="post" onSubmit="return validasi()">
 			<div>
 				<label>Username:</label>
 				<input type="text" name="username" id="username" />

@@ -1,6 +1,6 @@
 <?php 
 // koneksi database
-include 'koneksi.php';
+include '../koneksi.php';
  
 // menangkap data id yang di kirim dari url
 $id = $_GET['id'];
@@ -10,6 +10,6 @@ $id = $_GET['id'];
 mysqli_query($koneksi,"DELETE FROM masyarakat WHERE id='$id'");
  
 // mengalihkan halaman kembali ke index.php
-header("location:index.php");
+header("location:halaman_admin.php");
  
 ?>

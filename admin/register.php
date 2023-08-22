@@ -23,7 +23,17 @@
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><input type="text" name="password"></td>
+				<td><input type="password" name="password"></td>
+			<tr>
+			<tr>
+				<td>Level</td>
+				<td>
+					<select name="level">
+						<option value="admin">Admin</option>
+						<option value="petugas">Petugas</option>
+						<option value="masyarakat">Masyarakat</option>
+					</select>
+				</td>
 			<tr>
 				<td></td>
 				<td><input type="submit" value="SIMPAN"></td>

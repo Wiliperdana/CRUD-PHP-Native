@@ -13,7 +13,7 @@
 	<h3>EDIT DATA PENGADUAN</h3>
  
 	<?php
-	include 'koneksi.php';
+	include '../koneksi.php';
 	$id = $_GET['id'];
 	$data = mysqli_query($koneksi,"SELECT * FROM masyarakat WHERE id='$id'");
 	while($d = mysqli_fetch_array($data)){
