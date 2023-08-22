@@ -14,6 +14,6 @@ $status = $_POST['status'];
 mysqli_query($koneksi,"UPDATE masyarakat SET nama='$nama', nik='$nik', tgl_pengaduan='$tgl_pengaduan', isi_pengaduan='$isi_pengaduan', status='$status' where id='$id'");
  
 // mengalihkan halaman kembali ke index.php
-header("location:halaman_admin.php");
+header("location:halaman_masyarakat.php");
  
 ?>
